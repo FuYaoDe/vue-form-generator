@@ -26,7 +26,7 @@ module.exports = {
 			inputType: "hidden",
 			label: "--- INPUT ---",
 			model: "",
-			styleClasses: "alert alert-info"
+			styleClasses: "alert alert-info",
 		}, {
 			type: "input",
 			inputType: "hidden",
@@ -42,6 +42,8 @@ module.exports = {
 			required: true,
 			placeholder: "User's first name",
 			styleClasses: "half-width",
+      labelClasses: 'aaa',
+      addon: '測試',
 			validator: validators.string,
 			onChanged(model, newVal, oldVal, field) {
 				console.log(`Model's name changed from ${oldVal} to ${newVal}. Model:`, model);
@@ -85,7 +87,7 @@ module.exports = {
 			required: true,
 			hint: "Minimum 6 characters",
 			styleClasses: "half-width",
-			validator: validators.string.locale({ 
+			validator: validators.string.locale({
 				fieldIsRequired: "The password is required!",
 				textTooSmall: "Password must be at least {1} characters!"
 			})
@@ -310,7 +312,7 @@ module.exports = {
 			model: "avatar",
 			required: true,
 			browse: true,
-			hideInput: false,
+			hideInput: true,
 			inputName: "photo",
 			validator: validators.required
 		}, {
@@ -463,6 +465,7 @@ module.exports = {
 			selectOptions: {
 				noneSelectedText: "Nincs kijelölve"
 			},
+      addon: '權限',
 			values: [{
 				id: "admin",
 				name: "Administrator"
@@ -894,7 +897,7 @@ module.exports = {
 		// 	styleClasses: "half-width",
 		// 	validator: validators.string
 		// },
-		// {	
+		// {
 		// 		type: "text",
 		// 		label: "Username",
 		// 		model: "userName",
@@ -904,7 +907,7 @@ module.exports = {
 		// 		placeholder: "User's last name",
 		// 		styleClasses: ["half-width", "first"],
 		// 		validator: validators.string
-		// 	}, 
+		// 	},
 		// {
 		// 		type: "text",
 		// 		label: "Company name",
@@ -913,7 +916,7 @@ module.exports = {
 		// 		visible(model) {
 		// 			return model && model.type == "business";
 		// 		}
-		// 	}, 
+		// 	},
 		// 	{
 		// 		type: "text",
 		// 		label: "Company phone",
@@ -926,13 +929,13 @@ module.exports = {
 		// 		visible(model) {
 		// 			return model && model.type == "business";
 		// 		}
-		// 	}, 
+		// 	},
 		// 	{
 		// 		type: "email",
 		// 		label: "E-mail (email field)",
 		// 		model: "email",
 		// 		placeholder: "User's e-mail address"
-		// 	},  
+		// 	},
 		// 	{
 		// 		type: "text",
 		// 		label: "Phone",
@@ -943,7 +946,7 @@ module.exports = {
 		// 		help: "You can use any <b>formatted</b> texts. Or place a <a target='_blank' href='https://github.com/icebob/vue-form-generator'>link</a> to another site.",
 		// 		styleClasses: "half-width"
 		// 			//validator: validators.regexp
-		// 	}, 
+		// 	},
 		// 	{
 		// 		type: "color",
 		// 		label: "Color (basic)",
@@ -953,7 +956,7 @@ module.exports = {
 		// 			//preferredFormat: "rgb"
 		// 		},
 		// 		validator: validators.required
-		// 	}, 
+		// 	},
 		// 	{
 		// 		type: "number",
 		// 		label: "Age (number field)",
@@ -968,7 +971,7 @@ module.exports = {
 		// 			validators.integer,
 		// 			validators.number
 		// 		]
-		// 	}, 
+		// 	},
 		// 	{
 		// 		type: "text",
 		// 		label: "City",
@@ -1031,7 +1034,7 @@ module.exports = {
 		// 				};
 		// 			}
 		// 		}]
-		// 	}, 
+		// 	},
 
 	]
 };

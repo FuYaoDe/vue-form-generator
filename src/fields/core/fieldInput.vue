@@ -1,7 +1,7 @@
 <template lang="pug">
 .wrapper
 	input.form-control(
-		:type="schema.inputType", 
+		:type="schema.inputType",
 		:value="value",
 		@input="value = $event.target.value",
 		@change="onChange",
@@ -58,7 +58,7 @@
 						return fecha.format(value, "YYYY-MM-DDTHH:mm:ss");
 					}
 				}
-				
+
 				return value;
 			},
 			formatValueToModel(value) {
@@ -74,12 +74,12 @@
 						return Number(value);
 					}
 				}
-				
+
 				return value;
 			}
 		}
 	};
-	
+
 </script>
 
 <style lang="sass">
